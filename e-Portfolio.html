@@ -18,8 +18,53 @@
 <h3>Unit 2: Introducing First Order Logic</h3>
 
 <h3>Unit 3: Agent Architectures</h3>
+<p>
+<b>Readings</b><br>
+<a href="#maes">Maes, 1991</a> described systems of agents with different but interchangeable roles, 
+with the ability to adjust their own importance to particular tasks.<br>
+<a href="#kaelbling">Kaelbling, 1991</a> is about "the information content of the internal states of a machine."
+One sentence that caught my eye on the first page was:
+"the world may change during the computation, 
+invalidating the initial semantic interpretation of the inputs, 
+and possibly, therefore, the interpretation of the outputs."  So these agents need to be quick.  
+Emphasis is put on the modular architecture and the incremental nature of software development.
+It is made clear that this system is suitable for dynamic environments.
+A distinction is made between dynamic data, which needs to be kept in individual machines,
+and static data, which only needs to be in one instance, thereby reducing computing requirements.
+Reference is made to <a href="#brooks">Brooks, 1991</a>, which is also in this week's reading list.<br>
+<a href="#bratman">Bratman, 1988</a> discusses a combination of the weighing of alternatives, as in <a href="#maes">Maes, 1991</a>,
+and "means-end reasoning," while bearing in mind "resource boundedness," which apparently means that agents:
+"are unable to perform arbitrarily large computations in constant time."  
+This recognises the problem I saw in <a href="#kaelbling">Kaelbling, 1991</a> about getting out of synch with the state of environment,
+although a footnote on page 5 says that applying these systems to real-time situations was a relatively recent idea.
+The paper goes on to describe how a planning function could reduce the computing requirement by limiting the necessary reasoning.
+It sounds to me analogous to the shortcutting of an AND statement when the first argument evaluates to FALSE and the second argument is not evaluated.
+Also, knowledge is also bounded so that machines "are neither prescient nor omniscient."
+This bounding takes the form of filtering, e.g. by time frame, location or compatibility with existing plans.<br>
+<a href="#brooks">Brooks, 1991</a> got me in a tangle over the year to include in the citation. This paper was received by <i>Artificial Intelligence</i>
+in 1987 but not printed for four years, hence the year 1991 is cited. Perhaps this means that many papers are actually older than they seem.
+This paper is about agents ("independent and parallel activity producers") that interface to the environment more than to each other.
+There is an interesting declaration on the first page: "No one talks about replicating the full gamut of human intelligence any more. 
+Instead we see a retreat into specialized subproblems." 
+That may have been true in 1987 but today all those elements are being brought together again (<a href="#goertzel">Goertzel &amp; Pennachin, 2007</a>).
+Brooks advocates an incremental approach, starting with fairly simple systems. He is effectively saying we have to walk before we can run.
+By "no representation" Brooks is saying a system can make decisions by 
+"using the world as its own model and to continuously match the preconditions of each goal against the real world."
+I found this paper to be perhaps more optimistic than realistic, but that may be because I do not fully understand the mechanisms at work.<br>
+Finally, <a href="#reynolds">Reynolds, 1987</a> discusses computer animation of a flock of birds, where 
+"the aggregate motion of the simulated flock is the result of the dense interaction of the relatively simple behaviors of the individual simulated birds."
+It is a similar problem to those in the first four papers. For these "boids" (simulated birds), three behaviours are identified: "collision avoidance..., 
+velocity matching... and flock centering."  As with the other papers, computing is in LISP.
+</p>
+
+<h3>Collaborative Discussion 1: Agent Based Systems</h3>
+<p></p>
 
 <h3>Unit 4: Hybrid Agent Architectures</h3>
+<p>
+<b>Reading</b><br>
+<a href="#wooldridge">Wooldridge, 2009</a> Section 5.2, titled "Hybrid Agents," ***********
+</p>
 
 <h3>Unit 5: Agent Communication</h3>
 
@@ -38,9 +83,21 @@
 <h3>Unit 12: The Future of Intelligent Agents</h3>
 
 <h3>References</h3>
+<p id="bratman">Bratman, M.E., Israel, D.J. &amp; Pollack, M.E. (1988) Plans and resource-bounded practical reasoning. <i>Computational Intelligence</i> 4(3) 349-355. DOI: <a href="https://doi.org/10.1111/j.1467-8640.1988.tb00284.x">https://doi.org/10.1111/j.1467-8640.1988.tb00284.x</a></p>
+<p id="brooks">Brooks, R. (1991) Intelligence without representation. <i>Artificial Intelligence</i> 47(1-3): 139-159. DOI: <a href="https://doi.org/10.1016/0004-3702(91)90053-M">https://doi.org/10.1016/0004-3702(91)90053-M</a></p>
 <p id="cawsey">Cawsey, A. (1998) <i>The Essence of Artificial Intelligence</i>. Harlow: Pearson Education.</p>
+<p id="gilbert">Gilbert, N. (2020) <i>Agent-Based Models</i>. 2nd ed. Thousand Oaks: SAGE Publications.</p>
+<p id="goertzel">Goertzel, B., &amp; Pennachin, C. (Eds.). (2007). <i>Artificial General Intelligence</i>. Berlin: Springer.</p>
+<p id="kaelbling">Kaelbling, L.P. (1991) A situated-automata approach to the design of embedded agents. <i>ACM SIGART Bulletin</i> 2(4): 85 - 88. DOI: <a href="https://doi.org/10.1145/122344.122361">https://doi.org/10.1145/122344.122361</a></p>
+<p id="langton">Langton, C.G. (1995) <i>Artificial Life: An Overview</i>. Cambridge, MA: MIT Press.</p>
 <p id="lee">Lee, Siu-Fan (2017) <i>Logic: A Complete Introduction</i>. London: Hodder Education.</p>
+<p id="maes">Maes, P. (1991) The agent network architecture. <i>ACM SIGART Bulletin</i> 2(4): 115-120. DOI: <a href="https://doi.org/10.1145/122344.122367">https://doi.org/10.1145/122344.122367</a></p>
+<p id="payne">Payne, T.R. &amp; Tamma, V. (2014) Negotiating over ontological correspondences with asymmetric and incomplete knowledge. <i>AAMAS '14: Proceedings of the 2014 international conference on Autonomous agents and multi-agent systems</i> Sorbonne University, Paris, 5-9 May. 517-524.</p>
+<p id="reynolds">Reynolds, C.W. (1987) Flocks, Herds, and Schools: A Distributed Behavioral Model. <i>Computer Graphics</i> 21(4): 25-34. DOI: <a href="https://doi.org/10.1145/37402.37406">https://doi.org/10.1145/37402.37406</a></p>
 <p id="russell">Russell, S. &amp; Norvig, P. (2022) <i>Artificial Intelligence: A Modern Approach</i>. 4th ed. Harlow: Pearson Education.</p>
+<p id="searle">Searle, J.R. (1969) <i>Speech Acts: An Essay in the Philosophy of Language</i>. Cambridge University Press. DOI: <a href="https://doi.org/10.1017/CBO9781139173438">https://doi.org/10.1017/CBO9781139173438</a></p>
+<p id="testfatsion">Testfatsion, L &amp; Judd, K. (2006) ‘Handbook of Computational Economics, Vol. 2: Agent-Based Computational Economics’, in: Amman, H.M, Kendrick, D.A &amp; Rust, J. (eds) <i>Handbook of Computational Economics</i>. Amsterdam: Elsevier.</p>
+<p id="viljoen">Viljoen, G. (2024) Initial Post to Collaborative Discussion 1: Agent Based Systems. Available from: <a href="https://www.my-course.co.uk/mod/forum/discuss.php?d=245817">www.my-course.co.uk/mod/forum/discuss.php?d=245817</a> [Accessed 13 August 2024].</p>
 <p id="wooldridge">Wooldridge, M.J. (2009) <i>An Introduction to Multiagent Systems</i>. Chichester: John Wiley &amp; Sons.</p>
 
 
