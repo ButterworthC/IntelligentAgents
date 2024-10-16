@@ -218,7 +218,7 @@ This is a similar project to the Object Recognition assignment in the Machine Le
 
 <h3>Unit 8: Understanding Natural Language Processing (NLP)</h3>
 <p><b>Unit 8 Reading</b></p>
-<p><a href="#zimmerman">Zimmerman (2019)</a> Is about the tree-like representation of paresed phrases and sentences. 
+<p><a href="#zimmerman">Zimmerman (2019)</a> Is about the tree-like representation of parsed phrases and sentences. 
 The author shows how parsing can start with a list of words in the same order as the phrase or sentence, showing parts of speech and their functions, 
 e.g. nsubj (subject) or amod (adjective).
 Then this can be laid out in the same order but with connecting arrows showing these functions and the direction of modifications like adjectives.
@@ -230,6 +230,23 @@ The paper has links to:</p>
 <li><a href="https://spacy.io/api/data-formats#pos-tagging">Data formats</a> Details on spaCy's input and output data formats</li>
 <li><a href="https://www.youtube.com/watch?v=e12danHhlic">Yoav Goldberg: The missing elements in NLP (spaCy IRL 2019)</a></li>
 </ul>
+
+<p><b>Unit 8 Activity: Creating Parse Trees</b></p>
+<p>The activity calls for three phrases to be converted to "constituency-based parse trees" but since these are not mentioned in 
+<a href="#zimmerman">Zimmerman (2019)</a> I looked up another source, <a href="#chomsky">Chomsky (1957)</a> which says that these are
+the parse trees described by Zimmerman.</p>
+<p>Python has a library called Natural Language Toolkit (<a href="#nltk">NLTK, 2024</a>) which enables these parse trees 
+to be visualised almost as well as in
+<a href="#zimmerman">Zimmerman (2019)</a>, so I entered the three sentences as follows, with two versions of the ambiguous one with the dog,
+and the resulting parse trees are shown. First, I imported the Natural Language Toolkit:<br>
+<img src="images/import_nltk.jpg" width="230" height="37" /><br clear="all" />
+Then I populated the Tree objects with the edges and each word they classify.  The output is obtain via the draw() method of tree: 
+<img src="images/TheGovernmentRaisedInterestRates.jpg" width="644" height="273" /><br clear="all" />
+<img src="images/TheInternetGivesEveryoneAVoice.jpg" width="651" height="331" /><br clear="all" />
+<img src="images/TheManSawTheDog_WithTheTelescope.jpg" width="725" height="426" /><br clear="all" />
+<img src="images/TheManSaw_TheDogWithTheTelescope.jpg" width="770" height="425" /><br clear="all" />
+My notebook is on: <a href="https://github.com/ButterworthC/IntelligentAgents/blob/main/notebooks/ParseTrees.ipynb">GitHub</a>.
+</p>
 
 <h3>Unit 9: Introduction to Adaptive Algorithms</h3>
 <p><b>Unit 9 Lecturecast</b></p>
@@ -290,7 +307,19 @@ The paper concludes with a promise to build a prototype smart factory using this
 <p>The Bank of England's article about economic modelling (<a href="#turrell">Turrel, 2016</a>) begins by explaining how the behaviour of 
 large-scale systems is determined by the individual contributions of many components, each of which can be simulated by an agent.
 This is the idea of the "Digital Twin," developed at the University of Michigan (<a href="#grieves">Grieves, 2015</a>).
-This paper discusses recently developed agent-based models in the fields of "corporate bonds and housing."
+This paper discusses recently developed agent-based models in the fields of "corporate bonds and housing" and describes them as the
+economic equivalent of "bottom-up" Monte Carlo models from the world of science.
+There is a good exposition of the universal applicability of agent-based models:
+"Agents could represent the consumers in an economy, fish within a shoal, particles in a gas, or even galaxies in the Universe."
+Even individuals can be modelled, for example factory workers with different productivities.
+In economics these systems can be used to model 
+"cycles, bubbles, clustered volatility, fire sales of assets, and the onset of ‘bear’ and ‘bull’ markets."
+The author credits the physicist Enrico Fermi with using an agent-based approach to simulate the behaviour of individual neutrons
+instead of trying to calculate flux levels using formulas.  
+He also mentions the origin of the phrase "Monte Carlo Method" (<a href="#metropolis">Metropolis &amp; Utram, 1949</a>).
+An important justification for using this approach in economics is 
+"Adam Smith’s metaphor of the invisible hand: how the self-interested actions of real agents in the economy combine 
+to produce socially optimal outcomes"
 </p>
 
 <h3>Unit 12: The Future of Intelligent Agents</h3>
@@ -306,6 +335,7 @@ This paper discusses recently developed agent-based models in the fields of "cor
 <p id="bratman">Bratman, M.E., Israel, D.J. &amp; Pollack, M.E. (1988) Plans and resource-bounded practical reasoning. <i>Computational Intelligence</i> 4(3) 349-355. DOI: <a href="https://doi.org/10.1111/j.1467-8640.1988.tb00284.x">https://doi.org/10.1111/j.1467-8640.1988.tb00284.x</a></p>
 <p id="brooks">Brooks, R. (1991) Intelligence without representation. <i>Artificial Intelligence</i> 47(1-3): 139-159. DOI: <a href="https://doi.org/10.1016/0004-3702(91)90053-M">https://doi.org/10.1016/0004-3702(91)90053-M</a></p>
 <p id="cawsey">Cawsey, A. (1998) <i>The Essence of Artificial Intelligence</i>. Harlow: Pearson Education.</p>
+<p id="chomsky">Chomsky, N. (1957) <i>Syntactic Structures</i>. The Hague: Mouton &amp; Co.</p>
 <p id="elsayed">Elsayed, T. (2024) Deep Learning Fall 2024 Qatar University. Available from: <a href="https://www.youtube.com/playlist?list=PLRdABJkXXytCz19PsZ1PCQBKoZGV069k3">https://www.youtube.com/playlist?list=PLRdABJkXXytCz19PsZ1PCQBKoZGV069k3</a> [Accessed 3 October 2024].</p>
 <p id="finin_et_al">Finin, T., Fritzson, R., McKay, D. &amp; McEntire, R. (1994) KQML as an agent communication language. <i>Proceedings of the third international conference on Information and knowledge management</i>: 456-463. DOI: <a href="https://doi.org/10.1145/191246.191322">https://doi.org/10.1145/191246.191322</a></p>
 <p id="foit">Foit, K. (2022) Agent-based Modelling of Manufacturing Systems in the Context of "Industry 4.0". <i>Journal of Physics Conference Series</i> 2198(1): 012064. DOI: <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2198/1/012064">https://iopscience.iop.org/article/10.1088/1742-6596/2198/1/012064</a></p>
@@ -319,8 +349,10 @@ This paper discusses recently developed agent-based models in the fields of "cor
 <p id="langton">Langton, C.G. (1995) <i>Artificial Life: An Overview</i>. Cambridge, MA: MIT Press.</p>
 <p id="lee">Lee, Siu-Fan (2017) <i>Logic: A Complete Introduction</i>. London: Hodder Education.</p>
 <p id="maes">Maes, P. (1991) The agent network architecture. <i>ACM SIGART Bulletin</i> 2(4): 115-120. DOI: <a href="https://doi.org/10.1145/122344.122367">https://doi.org/10.1145/122344.122367</a></p>
+<p id="metropolis">Metropolis, M. &amp; Utram, S. (1949) The Monte Carlo Method. <i>Journal of the American Statistical Association</i> 44(247): 335-341. Available from: <a href="https://www.dam.brown.edu/people/dem/0123017505/MetropolisUlamJASA1949.pdf">https://www.dam.brown.edu/people/dem/0123017505/MetropolisUlamJASA1949.pdf</a> [Accessed 16 October 2024].</p>
 <p id="mikolov">Mikolov, T. et al. (2013) Distributed representations of words and phrases and their compositionality. <i>Advances in neural information processing systems</i>. Available from: <a href="https://proceedings.neurips.cc/paper_files/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf</a> [Accessed 21 September 2024].</p>
 <p id="ng">Ng, A. (2022) Machine Learning YouTube course. Available from: <a href="https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI">https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI</a> [Accessed 3 October 2024].</p>
+<p id="nltk">NLTK (2024) NLTK Documentation. Available from <a href="https://www.nltk.org/">https://www.nltk.org/</a> [Accessed 16 October 2024].</p>
 <p id="payne">Payne, T.R. &amp; Tamma, V. (2014) Negotiating over ontological correspondences with asymmetric and incomplete knowledge. <i>AAMAS '14: Proceedings of the 2014 international conference on Autonomous agents and multi-agent systems</i> Sorbonne University, Paris, 5-9 May. 517-524.</p>
 <p id="reynolds">Reynolds, C.W. (1987) Flocks, Herds, and Schools: A Distributed Behavioral Model. <i>Computer Graphics</i> 21(4): 25-34. DOI: <a href="https://doi.org/10.1145/37402.37406">https://doi.org/10.1145/37402.37406</a></p>
 <p id="russell">Russell, S. &amp; Norvig, P. (2022) <i>Artificial Intelligence: A Modern Approach</i>. 4th ed. Harlow: Pearson Education.</p>
